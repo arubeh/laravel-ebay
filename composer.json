@@ -19,6 +19,5 @@
         "psr-4": {
             "Hkonnet\\LaravelEbay\\": "src"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
