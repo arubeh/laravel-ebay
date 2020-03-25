@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.5",
-        "arubeh/ebay-sdk-php": "~18.0"
+        "arubeh/ebay-sdk-php": "*"
     },
     "license": "MIT",
     "authors": [
