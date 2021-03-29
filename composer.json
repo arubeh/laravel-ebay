@@ -5,8 +5,7 @@
     "keywords": ["ebay", "api", "sdk", "laravel", "laravel5", "php"],
     "license": "MIT",
     "require": {
-        "php": ">=5.5",
-        "arubeh/ebay-sdk-php": "dev-master"
+        "benmorel/ebay-sdk-php": "^19.0"
     },
     "license": "MIT",
     "authors": [
