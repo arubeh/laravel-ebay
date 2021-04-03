@@ -7,14 +7,23 @@ class Ebay
     private $sdk;
     private $config;
 
-    function __construct()
+    function __construct($devId=null, $appId=null, $certId=null)
     {
         $sandbox = config('ebay.mode') == 'sandbox'?true:false;
-        $config = [
-            'credentials' => config('ebay.'.config('ebay.mode').'.credentials'),
-            'siteId'     => config('ebay.siteId'),
-            'sandbox' => $sandbox
-        ];
+        if( $devId != null && $appId != null && $certId != null ) {
+            $config = [
+                'credentials' => ["devId" => $devId, "appId" => $appId, "certId" => $certId],
+                'siteId'     => config('ebay.siteId'),
+                'sandbox' => $sandbox
+            ];
+        }
+        else {
+            $config = [
+                'credentials' => config('ebay.'.config('ebay.mode').'.credentials'),
+                'siteId'     => config('ebay.siteId'),
+                'sandbox' => $sandbox
+            ];
+        }
 
         $this->config = $config;
     }

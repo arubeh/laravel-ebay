@@ -8,9 +8,10 @@ class EbayServices
 {
     private $sdk;
 
-    function __construct($args=[])
+    function __construct($devId=null, $appId=null, $certId=null)
     {
-        $ebay = new Ebay();
+        $args = [];
+        $ebay = new Ebay($devId, $appId, $certId);
         $config = $ebay->getConfig($args);
         $this->sdk = new Sdk($config);
     }
